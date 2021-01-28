@@ -41,10 +41,7 @@ body {
 }
 
 #tetromino {
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
   display: block;
 }
 
