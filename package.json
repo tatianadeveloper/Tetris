@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "devwebpack": "webpack --mode development"
+    "devwebpack": "webpack --mode development",
+    "deploy": "gh-pages -d distr"
   },
   "author": "",
   "license": "ISC",
+  "homepage": "https://tatianadeveloper.github.io/Tetris/",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "html-webpack-plugin": "^4.5.1",
@@ -29,6 +31,7 @@
     "eslint": "^7.18.0",
     "eslint-config-google": "^0.14.0",
     "eslint-webpack-plugin": "^2.4.3",
+    "gh-pages": "^3.1.0",
     "mini-css-extract-plugin": "^1.3.4",
     "node-sass": "^5.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
