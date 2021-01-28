@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tetris</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="board">
+        <canvas id="canvas"> </canvas>
+      </div>
+      <div id="info">
+        <div id="info-game">
+          <p>Score: <span id="score">0</span></p>
+          <p>Lines: <span id="lines">0</span></p>
+          <p>Level: <span id="level">0</span></p>
+          <p>Next: <span id="next"></span></p>
+          <canvas id="tetromino"> </canvas>
+        </div>
+        <div id="info-btn">
+          <button id="play" class="button">New Game</button>
+          <button id="pause" class="button">Pause</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

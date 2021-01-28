@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "no-unused-vars": "warn",
+    "linebreak-style": "off",
+    "no-trailing-spaces": "off",
+    "require-jsdoc": "off",
+    "no-debugger": "off",
+    "object-curly-spacing": "off",
+    "indent": "off",
+    "space-before-function-paren": "off",
+    "operator-linebreak": "off",
+    "no-invalid-this": "off"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "google"]
+}
