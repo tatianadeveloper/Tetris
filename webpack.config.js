@@ -10,8 +10,6 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 
-const options = {};
-
 const optimization = () => {
   const config = {};
 
@@ -52,6 +50,27 @@ const cssLoaders = (extra) => {
   return loaders;
 };
 
+const plugins = () => {
+  const base = [
+    new HTMLWebpackPlugin({
+      template: './index.html',
+      minify: {
+        collapseWhitespace: !isDev,
+      },
+    }),
+    new CleanWebpackPlugin(),
+    new MiniCssPlugin({
+      filename: filename('css'),
+    }),
+  ];
+
+  if (isDev) {
+    base.push(new ESLintPlugin({}));
+  }
+
+  return base;
+};
+
 const filename = (ext) => (isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`);
 
 module.exports = {
@@ -65,19 +84,7 @@ module.exports = {
     path: path.resolve(__dirname, 'distr'),
   },
   optimization: optimization(),
-  plugins: [
-    new HTMLWebpackPlugin({
-      template: './index.html',
-      minify: {
-        collapseWhitespace: !isDev,
-      },
-    }),
-    new CleanWebpackPlugin(),
-    new MiniCssPlugin({
-      filename: filename('css'),
-    }),
-    new ESLintPlugin({}),
-  ],
+  plugins: plugins(),
   module: {
     rules: [
       {
