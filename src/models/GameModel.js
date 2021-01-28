@@ -10,7 +10,6 @@ export default class GameModel {
   }
 
   init() {
-    this.isRunning = false;
     this.tetromino = null;
     this.board.init();
     this.positionX = 0;
