@@ -4,6 +4,7 @@ export default class Dom {
   static score = document.getElementById('score');
   static lines = document.getElementById('lines');
   static level = document.getElementById('level');
+  static plusScore = document.getElementById('plusscore');
   static gameOver = document.getElementById('gameover');
   static gameCanvas = document.getElementById('canvas');
   static infoCanvas = document.getElementById('tetromino');
@@ -25,13 +26,15 @@ export default class Dom {
 
   stopGame() {
     Dom.btnPause.style.visibility = 'hidden';
+    Dom.btnNewGame.focus();
     this.removeListenerKeyDown();
   }
 
-  updateInfo({ score, lines, level }) {
+  updateInfo({ score, lines, level, plusScore }) {
     Dom.score.innerText = score;
     Dom.lines.innerText = lines;
     Dom.level.innerText = level;
+    // Dom.plusScore.innerText = `+${plusScore}!`;
   }
 
   onClickNewGame(handler) {

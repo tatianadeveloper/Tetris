@@ -2,7 +2,7 @@ import { POINTS_DATA } from '@core/constants';
 
 export default function getScore(lines, level) {
   const points = countPoints(lines);
-  return points * (level + 1);
+  return points * level;
 }
 
 function countPoints(lines) {
