@@ -115,8 +115,15 @@ export default class GameController {
   };
 
   onClickNewGameHandler = () => {
-    this.cancelAnimation();
-    this.playNewGame();
+    let play = true;
+    if (this.gameModel.score > 0) {
+      const result = confirm('Are you sure you want to start new game?');
+      play = result;
+    }
+    if (play) {
+      this.cancelAnimation();
+      this.playNewGame();
+    }
   };
 
   onClickPauseHandler = () => {

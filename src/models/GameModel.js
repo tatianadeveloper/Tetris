@@ -16,7 +16,8 @@ export default class GameModel {
     this.positionY = 0;
     this.nextTetromino = null;
     this.score = 0;
-    this.level = 0;
+    this.plusScore = 0;
+    this.level = 1;
     this.lines = 0;
     this.speed = START_SPEED;
     this.gameOver = false;
@@ -49,18 +50,19 @@ export default class GameModel {
   }
 
   updateInfo(lines) {
+    this.addLines(lines);
     this.countLevel();
     this.countScore(lines);
-    this.addLines(lines);
   }
 
   countLevel() {
-    this.level = Math.floor(this.lines / 10);
+    this.level = Math.floor((this.lines - 1) / 10) + 1;
     this.speed = START_SPEED - this.level * LEVEL_SPEED;
   }
 
   countScore(lines) {
-    this.score += getScore(lines, this.level);
+    this.plusScore = getScore(lines, this.level);
+    this.score += this.plusScore;
   }
 
   addLines(lines) {
