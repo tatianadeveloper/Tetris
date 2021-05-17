@@ -14,10 +14,11 @@ body {
   display: grid;
   grid-template-columns: [game]1fr [info]1fr;
   gap: 20px;
-  padding: 10px;
-  width: 50vw;
-  align-items: center;
-  justify-content: center;
+  padding: 10px 0;
+
+  position: absolute;
+  top: 20%;
+  left: 25%;
 }
 
 #board {
