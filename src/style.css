@@ -12,7 +12,6 @@ body {
 #container {
   margin: auto auto;
   display: grid;
-  background-color: cornsilk;
   grid-template-columns: [game]1fr [info]1fr;
   gap: 20px;
   padding: 10px;
@@ -46,25 +45,22 @@ body {
 }
 
 #tetromino {
-  margin: 10px 5px;
+  margin: 15px;
   display: block;
 }
 
 #info-btn {
   margin: 10px;
   width: 100%;
-  text-align: center;
-  align-items: center;
 }
 
 .button {
-  margin: 10px;
+  margin: 10px 0;
   padding: 10px 10px;
   background: gray;
-  display: inline-block;
+  display: block;
   border: 0px;
   border-radius: 25px;
-  text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: 'Roboto', sans-serif;
