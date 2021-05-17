@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: white;
+}
+
+#container {
+  margin: auto auto;
+  display: grid;
+  background-color: cornsilk;
+  grid-template-columns: [game]1fr [info]1fr;
+  gap: 20px;
+  padding: 10px;
+  width: 50vw;
+  align-items: center;
+  justify-content: center;
+}
+
+#board {
+  margin: auto;
+  grid-column: game;
+}
+
+#canvas {
+  margin-left: 5px;
+  border: 2px solid grey;
+  display: block;
+}
+
+#info {
+  grid-column: info;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: grey;
+}
+#info-game {
+  margin: 20px 5px;
+}
+
+#tetromino {
+  margin: 10px 5px;
+  display: block;
+}
+
+#info-btn {
+  margin: 10px;
+
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.button {
+  margin: 10px;
+  padding: 10px 10px;
+  background: gray;
+  display: inline-block;
+  border: 0px;
+  border-radius: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  box-shadow: inset 2px 4px 8px#E0E3E6, 3px 3px 8px #b7bbbe;
+}
+
+.button:hover {
+  border-radius: 25px;
+  background-color: #515457;
+  color: white;
+}
+
+.button:focus {
+  border-radius: 25px;
+  color: white;
+  border: 0px;
+  outline: none;
+}
+
+.info-plusscore {
+  margin: 10px;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+}
+#plusscore {
+  color: red;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#pause {
+  visibility: hidden;
+}
+
